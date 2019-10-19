@@ -23,6 +23,9 @@
   <!-- Theme CSS - Includes Bootstrap -->
   <link href="css/creative.css" rel="stylesheet">
 
+  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
 </head>
 
 <body id="page-top">
@@ -134,26 +137,17 @@
   <!-- Beta Section -->
   <section class="page-section bg-dark text-white" id="beta">
     <div class="container text-center">
-      <h2 class="mb-4">Beta is Live!</h2>
+      <h2 class="mb-4">Beta Coming Soon!</h2>
       <div class="row h-100 align-items-center justify-content-center text-center">
         <div class="col-lg-8 align-self-baseline">
           <p class="text-white-75 font-weight-light mb-5">
-            We have official launched version 0.1.1 on the Ropsten Testnet for evaluation by the community.<br />
+            We have launched the boilerplate for the website and are now working on the first iteration of the smart contract. You can follow our progress on GitHub.<br />
             <br />
             
             <a class="btn btn-light btn-xl" href="https://etherscan.io/address/dfl8.eth">Etherscan</a>
             <a class="btn btn-primary btn-xl" href="https://github.com/dfl8">GitHub</a><br/>
             <br />
-            This beta release is to familiarize the community with the product and perform a series of test scenerios. 
-            If you'd like to provide feedback on additional features before official launch, pease see our <a href="#community">Community</a> section.<br />
-            <br />
-            List of Features to Finalize:
-            - Burn on wrap (0.5% vs 1%)
-            - Burn on unwrap (0.5% vs 1%)
-            - Burn on txn (1%)
-            - Whitelist wrap/unwrap burn (what is use case?)
-            - Whitelist txn burn (Time Lock, Helpers, DEX, etc)
-             <a href="https://weth.io/">Wrapped Ether</a>, with a 1% burn to counter Ethereum's native inflation.
+            This beta release is to test site and contract functionality, and allow the community to evaluate the contract mechanics. We encourage your participation and feedback!
           </p>
         </div>
       </div>
@@ -166,11 +160,20 @@
           <h2 class="mb-4">Deflate my Ether</h2>
           <div class="row h-100 align-items-center justify-content-center text-center">
             <div class="col-lg-8 align-self-baseline">
-              <p class="text-white-75 font-weight-light mb-5">
+              <p class="text-black-75 font-weight-light mb-5">
                 Convert your ETH to DFL8 token, which can be redeemed at any time. We recommend leaving 0.05 eth to cover gas for unwrapping..<br />
                 <br />
                 
-                <a class="btn btn-primary btn-xl" href="#">Wrap</a>
+                <form>
+                  <div class="form-group row">
+                    <div class="col-auto align-baseline pull-right">
+                        <input type="amout" class="form-control input-sm pull-right" id="wrapAmount" placeholder="0"> 
+                    </div>
+                    <div class="col-auto align-baseline pull-left">
+                        <a class="btn btn-primary btn-sm ml-1 my-1 mx-1 pull-left" href="#">Wrap</a>
+                    </div>
+                  </div>
+                </form>
               </p>
             </div>
           </div>
@@ -186,10 +189,8 @@
             <div class="col-lg-8 align-self-baseline">
               <p class="text-white-75 font-weight-light mb-5">
                 You can use DFL8 as a trading pair at the following places:<br />
-                <br />
-                
-                <a class="btn btn-light btn-xl" href="https://etherscan.io/address/dfl8.eth">DefSwap</a>
-                <a href="https://weth.io/">Wrapped Ether</a>, with a 1% burn to counter Ethereum's native inflation.
+                <br />                
+                <a class="btn btn-light btn-xl" href="https://defswap.io">DefSwap</a>
               </p>
             </div>
           </div>
@@ -204,14 +205,46 @@
         <div class="col-lg-8 text-center">
           <h2 class="mt-0">Explore the Deflationary Ecosystem!</h2>
           <hr class="divider my-4">
-          <p class="text-muted mb-5">Blah</p>
+          <p class="text-muted mb-5">The ecosystem is growing by the day, please ensure you always do your own research before purchasing any tokens as many of these are experimental.</p>
         </div>
       </div>
-      <div class="row">
+      <h3 class="mt-5 text-center">Community</h2>
+      <hr class="divider my-4">
+      <div class="row pb-5">
         <div class="col-lg-4 mr-auto text-center">
-          <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-          <!-- Make sure to change the email address in anchor text AND the link below! -->
-          <a class="d-block" href="mailto:contact@yourwebsite.com">team@dfl8.io</a>
+            <a class="btn btn-light btn-xl" href="https://t.me/DeflationaryCoins">Deflationary Coins Telegram</a>
+        </div>
+        <div class="col-lg-4 mr-auto text-center">
+          <a class="btn btn-light btn-xl" href="https://www.deflationarycoinmarketcap.com/">Deflationary Coin Market Cap</a>
+        </div>
+        <div class="col-lg-4 mr-auto text-center">
+            <a class="btn btn-light btn-xl" href="https://bsov.io">Twitter</a>
+        </div>
+      </div>
+      <h3 class="mt-5 text-center">Tokens</h2>
+      <hr class="divider my-4">
+      <div class="row pb-5">
+          <div class="col-lg-4 mr-auto text-center">
+              <a class="btn btn-light btn-xl" href="https://bsov.io">BitcoinSoV</a>
+            </div>
+          <div class="col-lg-4 mr-auto text-center">
+              <a class="btn btn-light btn-xl" href="https://shuffle.monster">Shuffle Monster</a>
+          </div>
+          <div class="col-lg-4 mr-auto text-center">
+              <a class="btn btn-light btn-xl" href="https://bombtoken.com">Bomb</a>
+          </div>
+        </div>
+      <h3 class="mt-5 text-center">Coverage</h2>
+      <hr class="divider my-4">
+      <div class="row pb-5">
+        <div class="col-lg-4 mr-auto text-center">
+            <a class="btn btn-light btn-xl" href="">Deflationary Coins Telegram</a>
+        </div>
+        <div class="col-lg-4 mr-auto text-center">
+            <a class="btn btn-light btn-xl" href="https://">Deflationary Coin Market Cap</a>
+        </div>
+        <div class="col-lg-4 mr-auto text-center">
+            <a class="btn btn-light btn-xl" href="https://bsov.io">Twitter</a>
         </div>
       </div>
     </div>
@@ -220,7 +253,7 @@
   <!-- Footer -->
   <footer class="bg-light py-5">
     <div class="container">
-      <div class="small text-center text-muted">DFL8 - Deflationary Wrapped Ethereum - v0.1.1</div>
+      <div class="small text-center text-muted">DFL8 - Deflationary Wrapped Ethereum - v0.1.2</div>
     </div>
   </footer>
 
