@@ -144,8 +144,8 @@
             We have launched the boilerplate for the website and are now working on the first iteration of the smart contract. You can follow our progress on GitHub.<br />
             <br />
             
-            <a class="btn btn-light btn-xl" href="https://etherscan.io/address/dfl8.eth">Etherscan</a>
-            <a class="btn btn-primary btn-xl" href="https://github.com/dfl8">GitHub</a><br/>
+            <a class="btn btn-light btn-xl" href="https://etherscan.io/address/0x2e9f0Ff6F6E4b6Af63be3391E449923BA9183a63">Etherscan</a>
+            <a class="btn btn-primary btn-xl" href="https://github.com/hashtablesnet/contract.dfl8.io">GitHub</a><br/>
             <br />
             This beta release is to test site and contract functionality, and allow the community to evaluate the contract mechanics. We encourage your participation and feedback!
           </p>
@@ -167,10 +167,16 @@
                 <form>
                   <div class="form-group row">
                     <div class="col-auto align-baseline pull-right">
+                        <h6 class="mb-4">Wrap</h6>
                         <input type="amout" class="form-control input-sm pull-right" id="wrapAmount" placeholder="0"> 
+                        <a class="btn btn-primary btn-sm ml-1 my-1 mx-1 pull-left" id="wrapButton" href="#">Wrap</a>
+                        <h6 class="mb-4"><span id="wrapNumEth">0</span> ETH = <span id="wrapNumTokens">0</span> DFL8</h6>
                     </div>
                     <div class="col-auto align-baseline pull-left">
-                        <a class="btn btn-primary btn-sm ml-1 my-1 mx-1 pull-left" href="#">Wrap</a>
+                        <h6 class="mb-4">Unwrap</h6>
+                        <input type="amout" class="form-control input-sm pull-right" id="unwrapAmount" placeholder="0"> 
+                        <a class="btn btn-primary btn-sm ml-1 my-1 mx-1 pull-left" id="unWrapButton" href="#">Unwrap</a>
+                        <h6 class="mb-4"><span id="unwrapNumTokens">0</span> DFL8 = <span id="unwrapNumEth">0</span> ETH</h6>
                     </div>
                   </div>
                 </form>
@@ -265,8 +271,15 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
+  <script charset="utf-8"
+    src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
+    type="text/javascript">
+  </script>
+
   <!-- Custom scripts for this template -->
   <script src="js/creative.js"></script>
+  <script src="js/main.js"></script>
+
 
 </body>
 
