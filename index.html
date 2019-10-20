@@ -121,9 +121,7 @@
             <hr class="divider light my-4">
 
             <h2 class="text-white mt-0">Security</h2>
-            <p class="text-white-50 mb-4">The contract owner has limited ability to whitelist exchange addresses to be
-              exempt from burn, and to change the name of the token in the future. No tokens can be minted without
-              depositing ETH. The contract has been audited and is <a
+            <p class="text-white-50 mb-4">There is no contract owner, only a Whitelist Manager to excempt qualified addresses from burn. All tokens must be backed by Ether, including for contract creator.<a
                 href="https://github.com/HashTablesNet/contract.dfl8.io/">open source</a>.</p>
           </div>
           <div class="col-md-6">
@@ -132,7 +130,7 @@
             <h2 class="text-white mt-0">Risk</h2>
             <p class="text-white-50 mb-4">This token aims to be low risk and truely deflationary, meaning the value of
               your tokens will never go down. Balances can be reduced by wrapping, unwrapping, and transfering the
-              tokens only. If you wrap 1 ETH and immediately unwrap, you will receive 0.99ETH back as the maximum
+              tokens only. If you wrap 1 ETH and immediately unwrap, you will receive 0.98ETH back as the maximum
               possible loss.</p>
           </div>
         </div>
@@ -206,7 +204,7 @@
         <div class="form-group row">
         <div class="col align-baseline">
           <div id="wrapBox">
-            <h4 class="mb-4">Wrap</h4>
+            <h4 class="mb-4">Wrap Ξ</h4>
             <small><a href="#wrap" id="myEtherBalance" class="eth-enabled">0</a> ETH available.</small>
             <input type="amout" class="form-control input-sm pull-right" id="wrapAmount" placeholder="0">
             <small><span id="wrapNumEth">0</span> ETH = <span id="wrapNumTokens">0</span> DFL8</small><br/>

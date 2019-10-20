@@ -122,6 +122,8 @@ async function getContractStats() {
     // console.log("contractTokenBalance: "+ contractTokenBalance);
     contractTokenPrice = await contract.methods.getTokenPrice().call();
     // console.log("contractTokenPrice: "+ contractTokenPrice);
+    contractBurnBalance = await contract.methods.burnedTokens().call();
+    // console.log("contractTokenPrice: "+ contractTokenPrice);
 
     if(ethereumEnabled) {
         walletTokens = await contract.methods.balanceOf(walletAddress).call();
@@ -133,7 +135,7 @@ async function getContractStats() {
 
     $("#contractTokenBalance").html((contractTokenBalance / 1e18).toFixed(3));
     $("#contractEtherBalance").html((contractEtherBalance / 1e18).toFixed(3));
-    $("#contractBurnBalance").html(((contractEtherBalance - contractTokenBalance) / 1e18).toFixed(3));
+    $("#contractBurnBalance").html((contractBurnBalance / 1e18).toFixed(3));
     $("#contractPrice").html((contractTokenPrice / 1e18).toFixed(3));
 
     setTimeout(getContractStats, 5000);
